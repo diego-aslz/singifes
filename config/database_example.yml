@@ -1,0 +1,47 @@
+pingifes:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: pingifesDados
+  pool: 5
+  host: localhost
+  port: 3010
+  username: root
+  password:
+  socket: /var/run/mysqld/mysqld.sock
+
+sigaa:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: sigaa
+  pool: 5
+  host: 127.0.0.1
+  port: 5432
+  username: postgres
+  password:
+  socket: /var/run/mysqld/mysqld.sock
+
+sipac:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: sipac
+  pool: 5
+  host: 127.0.0.1
+  port: 5432
+  username: postgres
+  password:
+  socket: /var/run/mysqld/mysqld.sock
+
+sigrh:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: sigrh
+  pool: 5
+  host: 127.0.0.1
+  port: 5432
+  username: postgres
+  password:
+  socket: /var/run/mysqld/mysqld.sock
