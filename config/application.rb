@@ -1,8 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
-# Pick the frameworks you want:
 require "active_record"
-require 'bundler/setup'
 require 'active_support/core_ext'
 require 'active_support/dependencies'
 require 'erb'
@@ -31,18 +29,12 @@ module Integration
       require "#{dir}/config/logger_factory.rb"
       @logger = LoggerFactory.build
 
-      # database_cfg = YAML.load(ERB.new(IO.read(File.join(dir, 'config',
-      #     "database.yml"))).result)
-      # connection_details = database_cfg['sigaa'] rescue nil || {}
-
       ["lib", "config/initializers"].each do |d|
         Dir["#{dir}/#{d}/*.rb"].each {|f| do_require f }
       end
       ["app/helpers", "app/models/remote/concerns", "app"].each do |d|
         Dir["#{dir}/#{d}/**/*.rb"].each {|f| do_require f }
       end
-
-      # ActiveRecord::Base.establish_connection(connection_details)
     end
   end
 end
