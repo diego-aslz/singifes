@@ -1,6 +1,6 @@
-module SIGAA
+module ADMIN
   class Person < ActiveRecord::Base
-    include DatabaseHelper::SIGAA
+    include DatabaseHelper::ADMIN
     self.table_name = 'comum.pessoa'
     self.primary_key = :id_pessoa
   end
